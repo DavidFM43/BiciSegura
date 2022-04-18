@@ -134,7 +134,6 @@ public class eliminar_denuncia extends AppCompatActivity {
 
     }
 
-    //string.indexOf('a')
 
 
 

@@ -36,7 +36,7 @@ public class Barra_Lateral extends AppCompatActivity implements NavigationView.O
         nav_view.setNavigationItemSelectedListener(this);
 
         //(contexto, variable drawer, variable toolbar, las strings que definimos anteriormene.
-        ActionBarDrawerToggle tog = new ActionBarDrawerToggle(this, drawer, barra, R.string.nav_drawer_open,R.string.nav_drawer_close);
+        ActionBarDrawerToggle tog = new ActionBarDrawerToggle(this, drawer, barra, R.string.nav_drawer_open, R.string.nav_drawer_close);
         drawer.addDrawerListener(tog);
         //Rota el hamburger icon (el cuadro que abre el drawer)
         tog.syncState();
@@ -47,10 +47,9 @@ public class Barra_Lateral extends AppCompatActivity implements NavigationView.O
     }
 
 
-
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.entrega1:
                 getSupportFragmentManager().beginTransaction().replace(R.id.cont_fragmentos, new Pestañas_entrega1()).commit();
                 break;
@@ -66,7 +65,7 @@ public class Barra_Lateral extends AppCompatActivity implements NavigationView.O
 
     //El siguiente método permite que, cuando nuestro drawer está abierto, y al presionar "volver" en nuestro teléfono, este layout se cierre, como es común.
     @Override
-    public void onBackPressed(){
+    public void onBackPressed() {
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
